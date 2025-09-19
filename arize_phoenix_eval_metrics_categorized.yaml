@@ -1,4 +1,4 @@
-# LLM Response Quality Metrics
+# I. LLM Response Quality Metrics
 hallucination:
   name: "Hallucination Detection"
   description: "Detects factual inaccuracies or fabricated information in LLM responses"
@@ -23,7 +23,7 @@ completeness:
   category: "quality"
   scoring: "scale_1_5"  # 1-5 scale where 5 is most complete
 
-# Bias and Fairness Metrics
+# II. Safety and Fairness Metrics
 toxicity:
   name: "Toxicity Detection"
   description: "Identifies harmful, offensive, or inappropriate content in responses"
@@ -42,7 +42,7 @@ fairness:
   category: "safety"
   scoring: "scale_1_5"  # 1-5 scale where 5 is most fair
 
-# Accuracy and Correctness Metrics
+# III. Accuracy and Correctness Metrics
 factual_accuracy:
   name: "Factual Accuracy"
   description: "Verifies factual correctness of information provided in responses"
@@ -61,7 +61,7 @@ citation_accuracy:
   category: "accuracy"
   scoring: "percentage"  # 0-100% citation accuracy
 
-# User Experience Metrics
+# IV. User Experience Metrics
 clarity:
   name: "Response Clarity"
   description: "Assesses how clear and understandable the response is to users"
@@ -86,7 +86,7 @@ engagement:
   category: "experience"
   scoring: "scale_1_5"  # 1-5 scale where 5 is most engaging
 
-# Technical Performance Metrics
+# V. Operational & Performance Metrics
 latency:
   name: "Response Latency"
   description: "Measures the time taken to generate a response"
@@ -105,7 +105,7 @@ token_efficiency:
   category: "performance"
   scoring: "ratio"  # Useful tokens / Total tokens used
 
-# Retrieval and Context Metrics
+# VI. Retrieval & Context Metrics
 retrieval_precision:
   name: "Retrieval Precision"
   description: "Measures accuracy of retrieved documents or context for RAG systems"
