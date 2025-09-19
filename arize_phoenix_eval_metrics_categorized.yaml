@@ -1,0 +1,131 @@
+# LLM Response Quality Metrics
+hallucination:
+  name: "Hallucination Detection"
+  description: "Detects factual inaccuracies or fabricated information in LLM responses"
+  category: "quality"
+  scoring: "binary"  # 0 = hallucination detected, 1 = no hallucination
+  
+relevance:
+  name: "Response Relevance"
+  description: "Measures how well the response addresses the user's query"
+  category: "quality"
+  scoring: "scale_1_5"  # 1-5 scale where 5 is most relevant
+  
+coherence:
+  name: "Response Coherence"
+  description: "Evaluates logical flow and consistency within the response"
+  category: "quality"
+  scoring: "scale_1_5"  # 1-5 scale where 5 is most coherent
+  
+completeness:
+  name: "Response Completeness"
+  description: "Assesses whether the response fully addresses all aspects of the query"
+  category: "quality"
+  scoring: "scale_1_5"  # 1-5 scale where 5 is most complete
+
+# Bias and Fairness Metrics
+toxicity:
+  name: "Toxicity Detection"
+  description: "Identifies harmful, offensive, or inappropriate content in responses"
+  category: "safety"
+  scoring: "binary"  # 0 = toxic content detected, 1 = clean content
+  
+bias:
+  name: "Bias Detection"
+  description: "Detects potential biases in LLM responses across different demographic groups"
+  category: "safety"
+  scoring: "scale_1_5"  # 1-5 scale where 5 indicates no bias
+  
+fairness:
+  name: "Response Fairness"
+  description: "Evaluates equitable treatment across different user groups and contexts"
+  category: "safety"
+  scoring: "scale_1_5"  # 1-5 scale where 5 is most fair
+
+# Accuracy and Correctness Metrics
+factual_accuracy:
+  name: "Factual Accuracy"
+  description: "Verifies factual correctness of information provided in responses"
+  category: "accuracy"
+  scoring: "percentage"  # 0-100% accuracy
+  
+groundedness:
+  name: "Response Groundedness"
+  description: "Measures how well the response is supported by provided context or knowledge base"
+  category: "accuracy"
+  scoring: "scale_1_5"  # 1-5 scale where 5 is fully grounded
+  
+citation_accuracy:
+  name: "Citation Accuracy"
+  description: "Evaluates correctness of citations and references in the response"
+  category: "accuracy"
+  scoring: "percentage"  # 0-100% citation accuracy
+
+# User Experience Metrics
+clarity:
+  name: "Response Clarity"
+  description: "Assesses how clear and understandable the response is to users"
+  category: "experience"
+  scoring: "scale_1_5"  # 1-5 scale where 5 is most clear
+  
+conciseness:
+  name: "Response Conciseness"
+  description: "Evaluates whether the response is appropriately brief without losing important information"
+  category: "experience"
+  scoring: "scale_1_5"  # 1-5 scale where 5 is optimally concise
+  
+helpfulness:
+  name: "Response Helpfulness"
+  description: "Measures how useful the response is in addressing user needs"
+  category: "experience"
+  scoring: "scale_1_5"  # 1-5 scale where 5 is most helpful
+  
+engagement:
+  name: "User Engagement"
+  description: "Assesses how engaging and interesting the response is to users"
+  category: "experience"
+  scoring: "scale_1_5"  # 1-5 scale where 5 is most engaging
+
+# Technical Performance Metrics
+latency:
+  name: "Response Latency"
+  description: "Measures the time taken to generate a response"
+  category: "performance"
+  scoring: "milliseconds"  # Response time in milliseconds
+  
+throughput:
+  name: "System Throughput"
+  description: "Measures the number of requests processed per unit time"
+  category: "performance"
+  scoring: "requests_per_second"  # Requests handled per second
+  
+token_efficiency:
+  name: "Token Efficiency"
+  description: "Evaluates efficient use of tokens in generating responses"
+  category: "performance"
+  scoring: "ratio"  # Useful tokens / Total tokens used
+
+# Retrieval and Context Metrics
+retrieval_precision:
+  name: "Retrieval Precision"
+  description: "Measures accuracy of retrieved documents or context for RAG systems"
+  category: "retrieval"
+  scoring: "percentage"  # 0-100% precision
+  
+retrieval_recall:
+  name: "Retrieval Recall"
+  description: "Measures completeness of retrieved relevant documents"
+  category: "retrieval"
+  scoring: "percentage"  # 0-100% recall
+  
+context_relevance:
+  name: "Context Relevance"
+  description: "Evaluates how relevant the retrieved context is to the user query"
+  category: "retrieval"
+  scoring: "scale_1_5"  # 1-5 scale where 5 is most relevant
+  
+context_utilization:
+  name: "Context Utilization"
+  description: "Measures how effectively the LLM uses provided context in generating responses"
+  category: "retrieval"
+  scoring: "percentage"  # 0-100% utilization rate
